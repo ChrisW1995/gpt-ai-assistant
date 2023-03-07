@@ -48,6 +48,13 @@ class Event {
     return this.message.type === MESSAGE_TYPE_TEXT;
   }
 
+    /**
+   * @returns {boolean}
+   */
+    get isSpecificCommand() {
+      return this.message.text.toLowerCase().includes('@gpt')||this.message.text.includes('@friday');
+    }
+  
   /**
    * @returns {boolean}
    */
