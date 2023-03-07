@@ -51,7 +51,7 @@ const handleEvents = async (events = []) => (
           .map((event) => new Context(event))
           .map((context) => context.initialize()),
       ))
-        .map((context) => (context.error ? context : handleContext(context) && context.messages.includes("@friday" || context.messages.includes("@gpt"))),
+        .map((context) => (context.error ? context : handleContext(context) && context.messages.includes("@friday" || context.messages.includes("@gpt")))),
     ))
       .filter((context) => context.messages.length > 0)
       .map((context) => replyMessage(context)),
