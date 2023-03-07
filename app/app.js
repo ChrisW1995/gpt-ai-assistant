@@ -47,7 +47,8 @@ const handleEvents = async (events = []) => (
         events
           .map((event) => new Event(event))
           .filter((event) => event.isMessage)
-          .filter((event) => event.isText || event.isAudio && event.isSpecificCommand)
+          .filter((event) => event.isText || event.isAudio)
+          .filter((event) => event.isSpecificCommand)
           .map((event) => new Context(event))
           .map((context) => context.initialize()),
       ))
