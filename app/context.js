@@ -81,7 +81,7 @@ class Context {
    */
   get trimmedText() {
     if (this.event.isText) {
-      const text = this.event.text.replaceAll('　', ' ').replace(config.BOT_NAME, '').trim();
+      const text = this.event.text.replaceAll('　', ' ').replace(config.BOT_NAME, '').replace('gpt', '').trim();
       return addMark(text);
     }
     if (this.event.isAudio) {
