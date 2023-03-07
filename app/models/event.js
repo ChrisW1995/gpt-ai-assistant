@@ -52,7 +52,7 @@ class Event {
    * @returns {boolean}
    */
     get isSpecificCommand() {
-      return this.message.text.toLowerCase().includes('@gpt')||this.message.text.includes('@friday');
+      return this.message.text.toLowerCase().includes('gpt')||this.message.text.includes('friday');
     }
   
   /**
