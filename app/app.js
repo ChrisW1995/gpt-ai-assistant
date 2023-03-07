@@ -53,7 +53,7 @@ const handleEvents = async (events = []) => (
       ))
         .map((context) => (context.error ? context : handleContext(context))),
     ))
-      .filter((context) => context.messages.length > 0 && && context.messages.includes("@friday") || context.messages.includes("@gpt"))
+      .filter((context) => context.messages.length > 0 && context.messages.includes("@friday") || context.messages.includes("@gpt"))
       .map((context) => replyMessage(context)),
   ))
 );
