@@ -93,7 +93,7 @@ class Context {
   get hasBotName() {
     if (this.event.isText) {
       const text = this.event.text.replaceAll('　', ' ').trim().toLowerCase();
-      return (text.startsWith(config.BOT_NAME.toLowerCase()) || text.startsWith('gpt'.toLowerCase()));
+      return (text.startsWith(config.BOT_NAME.toLowerCase()) || text.startsWith('gpt'));
     }
     if (this.event.isAudio) {
       const text = this.transcription.toLowerCase();
